@@ -1,0 +1,5 @@
+1. Effective Database Design
+2. Backend Development
+3. Frontend Development -> UI/UX
+4. Documentation
+5. Deployment 
