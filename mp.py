@@ -3,6 +3,8 @@ import mysql.connector as sql
 con = sql.connect(host = "localhost",user = 'root',passwd = '',database = 'nft_project')
 c1 = con.cursor()
 
+
+
 ##############################################################################
 def bac(B_AC,cvv,wlt):
     B_AC = int(input('''Enter your 16 digit credit card number : '''))
