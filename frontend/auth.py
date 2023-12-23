@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget, QPushButton, QHBoxLayout, QSizePolicy
 
-class Mainmenu(QMainWindow):
+class Auth(QMainWindow):
     def __init__(self):
         super().__init__()
         self.initUI()
@@ -92,12 +92,3 @@ class Mainmenu(QMainWindow):
         content_layout.addWidget(label_container, alignment=Qt.AlignTop)
 
         layout.addWidget(content_widget)
-
-def main():
-    app = QApplication(sys.argv)
-    window = Mainmenu()
-    window.show()
-    sys.exit(app.exec_())
-
-if __name__ == '__main__':
-    main()

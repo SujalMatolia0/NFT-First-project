@@ -1,12 +1,12 @@
 import sys
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication
-from menu import Mainmenu
+from auth import Auth
 
 
 def main():
     app = QApplication(sys.argv)
-    window = Mainmenu()
+    window = Auth()
     window.show()
     sys.exit(app.exec_())
 
