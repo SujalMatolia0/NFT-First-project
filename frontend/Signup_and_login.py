@@ -56,10 +56,20 @@ class Login(QDialog):
         loadUi('D:/PROJECT WITH SUJAL/NFT-First-project-main/frontend/LGG In FORM.ui', self)
         self.Login.clicked.connect(self.Loggedinstatus)
         self.Loginpass.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.db_manager = db_manager
     def Loggedinstatus(self):
         email = self.Loginemail.text()
         passwd = self.Loginpass.text()
-        print("THe {} {} has entered the chat".format(email, passwd))
+        if not(email and passwd):
+            QMessageBox.warning(None, "Error", "Please enter both email and password.")
+            return
+        if self.db_manager.fetch_user(email, passwd):
+            QMessageBox.information(None, "Success", "Logged in successfully.")
+            return
+        else:
+            QMessageBox.warning(None, "Error", "Incorrect email or password.")
+            return
+        
     
 app = QApplication(sys.argv)
 db_manager= DBMS()

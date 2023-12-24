@@ -10,7 +10,8 @@ from db_manager import DBMS
 
 def main():
     app = QApplication(sys.argv)
-    window = Sign_Up()
+    db_manager= DBMS()
+    window = Sign_Up(db_manager)
     window.show()
     sys.exit(app.exec_())
 

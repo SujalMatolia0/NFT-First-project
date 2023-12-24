@@ -13,13 +13,11 @@ class DBMS:
         except sql.Error as e:
             print(f"Error: {e}")
             return False
-    def fetch_query(self, query, values = None):
+    def fetch_user(self, email, pswd):
         try:
-            if values:
-                self.c1.execute(query, values)
-            else:
-                self.c1.execute(query)
-            return self.c1.fetchone()
+            self.c1.execute(f"SELECT email,pass from user_details WHERE email = %s AND pass = %s", (email, pswd))
+            user = self.c1.fetchone()
+            return user is not None
         except sql.Error as e:
             print(f"Error: {e}")
     def close_connection(self):
