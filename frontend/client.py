@@ -1,12 +1,12 @@
 import sys
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication
-from auth import Auth
+from Signup_and_login import Sign_Up
 
 
 def main():
     app = QApplication(sys.argv)
-    window = Auth()
+    window = Sign_Up()
     window.show()
     sys.exit(app.exec_())
 

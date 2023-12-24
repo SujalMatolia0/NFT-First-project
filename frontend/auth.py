@@ -10,7 +10,7 @@ class Auth(QMainWindow):
     def initUI(self):
         self.setWindowTitle('NFT Selling App')
         self.setGeometry(100, 100, 800, 600)
-        self.setStyleSheet("background-color: purple;")
+        self.setStyleSheet("background-color: black;")
         self.setupLayout()
 
     def setupLayout(self):
