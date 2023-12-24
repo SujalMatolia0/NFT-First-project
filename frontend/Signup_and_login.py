@@ -1,14 +1,18 @@
 import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QDialog, QApplication, QWidget
+from PyQt5.QtWidgets import QDialog, QApplication, QWidget, QMessageBox
 from PyQt5.uic import loadUi
+from db_manager import DBMS
 
 class Sign_Up(QDialog):
    
-    def __init__(self):
+    def __init__(self, db_manager):
         super(Sign_Up,self).__init__()
         loadUi('D:/PROJECT WITH SUJAL/NFT-First-project-main/frontend/SIGNUP FORM.ui', self)
+        
+        self.db_manager = db_manager
+        
         self.signupbutton.clicked.connect(self.signupstatus)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.conpass.setEchoMode(QtWidgets.QLineEdit.Password)
@@ -22,10 +26,28 @@ class Sign_Up(QDialog):
     def signupstatus(self):
         fname = self.fname.text()
         lname = self.lname.text()
-        print("THe {} {} has entered the chat".format(fname, lname))
-        login = Login()
-        widget.addWidget(login)
-        widget.setCurrentIndex(widget.currentIndex() + 1) 
+        email = self.email.text()
+        pswd = self.password.text()
+        cpswd = self.conpass.text()
+        
+        if not(fname and lname and email and pswd and cpswd):
+            QMessageBox.warning(None, "Error", "Please fill in all details.")
+            return
+        if (pswd != cpswd):
+            QMessageBox.warning(None, "Error", "Passwords, do not matched.")
+            return
+        if '@' not in email:
+            QMessageBox.warning(None, "Error", "Invalid email.")
+            return  
+        success = self.db_manager.insert_user(fname, lname, email, pswd)
+        
+        if success:
+            QMessageBox.information(None, "Success", "Successfully Registered. \nPlease log in again.")
+            login = Login()
+            widget.addWidget(login)
+            widget.setCurrentIndex(widget.currentIndex() + 1) 
+        else:
+            QMessageBox.warning(None, "Error", "Registration was unsuccessfull. \n Please try again later.")
 
 
 class Login(QDialog):
@@ -40,7 +62,8 @@ class Login(QDialog):
         print("THe {} {} has entered the chat".format(email, passwd))
     
 app = QApplication(sys.argv)
-mainwindow = Sign_Up()
+db_manager= DBMS()
+mainwindow = Sign_Up(db_manager)
 widget = QtWidgets.QStackedWidget()
 widget.addWidget(mainwindow)
 widget.setFixedSize(800,605)
