@@ -109,6 +109,22 @@ color: rgb(197, 197, 197);</string>
     <string>Enter your cvv code (eg: 341)</string>
    </property>
   </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>681</width>
+     <height>551</height>
+    </rect>
+   </property>
+  </widget>
+  <zorder>widget</zorder>
+  <zorder>creditcardno</zorder>
+  <zorder>label_3</zorder>
+  <zorder>addbank</zorder>
+  <zorder>label_4</zorder>
+  <zorder>cvv</zorder>
  </widget>
  <resources/>
  <connections/>
