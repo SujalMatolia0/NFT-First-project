@@ -9,7 +9,7 @@ class Sign_Up(QDialog):
    
     def __init__(self, db_manager):
         super(Sign_Up,self).__init__()
-        loadUi('D:/PROJECT WITH SUJAL/NFT-First-project-main/frontend/SIGNUP FORM.ui', self)
+        loadUi('SIGNUP FORM.ui', self)
         
         self.db_manager = db_manager
         
@@ -53,7 +53,7 @@ class Sign_Up(QDialog):
 class Login(QDialog):
     def __init__(self):
         super(Login,self).__init__()
-        loadUi('D:/PROJECT WITH SUJAL/NFT-First-project-main/frontend/LGG In FORM.ui', self)
+        loadUi('LGG In FORM.ui', self)
         self.Login.clicked.connect(self.Loggedinstatus)
         self.Loginpass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.db_manager = db_manager
@@ -76,6 +76,5 @@ db_manager= DBMS()
 mainwindow = Sign_Up(db_manager)
 widget = QtWidgets.QStackedWidget()
 widget.addWidget(mainwindow)
-widget.setFixedSize(800,605)
 widget.show()
 app.exec_()
