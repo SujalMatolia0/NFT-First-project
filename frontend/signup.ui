@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>677</width>
+    <width>915</width>
     <height>587</height>
    </rect>
   </property>
@@ -212,7 +212,7 @@ background-color: rgb(77, 77, 77);</string>
   <include location="C:/Users/NOVA BURST/Downloads/nft bgm.qrc"/>
   <include location="C:/Users/NOVA BURST/Downloads/res.qrc"/>
   <include location="LoginUi/res.qrc"/>
-  <include location="C:/Users/NOVA BURST/Downloads/New Text Document.txt"/>
+  <include location="C:/Users/NOVA BURST/Downloads/res.qrc"/>
  </resources>
  <connections/>
 </ui>

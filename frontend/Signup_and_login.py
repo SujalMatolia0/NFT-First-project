@@ -9,7 +9,7 @@ class Sign_Up(QDialog):
    
     def __init__(self, db_manager):
         super(Sign_Up,self).__init__()
-        loadUi('SIGNUP FORM.ui', self)
+        loadUi('signup.ui', self)
         
         self.db_manager = db_manager
         
@@ -53,23 +53,51 @@ class Sign_Up(QDialog):
 class Login(QDialog):
     def __init__(self):
         super(Login,self).__init__()
-        loadUi('LGG In FORM.ui', self)
+        loadUi('login.ui', self)
         self.Login.clicked.connect(self.Loggedinstatus)
         self.Loginpass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.db_manager = db_manager
     def Loggedinstatus(self):
-        email = self.Loginemail.text()
+        Login.email = self.Loginemail.text()
         passwd = self.Loginpass.text()
-        if not(email and passwd):
+        if not(Login.email and passwd):
             QMessageBox.warning(None, "Error", "Please enter both email and password.")
             return
-        if self.db_manager.fetch_user(email, passwd):
+        if self.db_manager.fetch_user(Login.email, passwd):
             QMessageBox.information(None, "Success", "Logged in successfully.")
-            return
+            bankauth = Bankdetails(db_manager)
+            widget.addWidget(bankauth)
+            widget.setCurrentIndex(widget.currentIndex() + 1)
         else:
             QMessageBox.warning(None, "Error", "Incorrect email or password.")
             return
         
+class Bankdetails(Login, QDialog):
+    def __init__(self, db_manager):
+        super(Bankdetails, self).__init__()
+        self.email = Login.email
+        loadUi('bankdetails.ui', self)
+        self.db_manager = db_manager
+        self.addbank.clicked.connect(self.bankauth)
+        
+    def bankauth(self):
+        cardno = self.creditcardno.text()
+        cvv = self.cvv.text()
+        if not(cardno and cvv):
+            QMessageBox.warning(None,"Error", "Please fill the bank details properly.")
+            return
+        if (len(cardno) != 16):
+            QMessageBox.warning(None,"Error", "Please enter correct 16 digit code.")
+            return
+        if (len(cvv) != 3):
+            QMessageBox.warning(None,"Error", "Please enter correct cvv code.")
+            return
+        success = self.db_manager.insert_bank(cardno, cvv, email = self.email)
+        if success:
+            QMessageBox.information(None, "Success", "Bank account added successfully.")
+            return
+        else:
+            QMessageBox.warning(None, "Error", "Something went wrong.")
     
 app = QApplication(sys.argv)
 db_manager= DBMS()
