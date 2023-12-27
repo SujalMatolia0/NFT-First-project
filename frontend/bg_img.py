@@ -9,7 +9,7 @@ class Mywidget(QWidget):
         
         self.setGeometry(100,100,800,600)
         self.setWindowTitle("bg IMG")
-        Bg_IMG = "C:/Users/NOVA BURST/Downloads/nftbgm.png"
+        Bg_IMG = "NFT ADDA #!.png"
         pixmap = QPixmap(Bg_IMG)
         bg_label = QLabel(self)
         bg_label.setPixmap(pixmap)

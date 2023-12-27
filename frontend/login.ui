@@ -15,30 +15,14 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(232, 0, 232);
-background-color: rgb(0, 0, 0);</string>
+background-color: rgb(0, 0, 0);
+background: transparent;</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>150</y>
-     <width>231</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 30pt &quot;Comic Sans MS&quot;;
-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;NFT ADDA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="Loginemail">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>320</y>
+     <x>350</x>
+     <y>350</y>
      <width>301</width>
      <height>30</height>
     </rect>
@@ -57,8 +41,8 @@ color: rgb(197, 197, 197);</string>
   <widget class="QLineEdit" name="Loginpass">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>360</y>
+     <x>350</x>
+     <y>390</y>
      <width>301</width>
      <height>30</height>
     </rect>
@@ -77,15 +61,18 @@ color: rgb(197, 197, 197);</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>220</y>
+     <x>460</x>
+     <y>280</y>
      <width>131</width>
      <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);
+font: 24pt &quot;Cooper Black&quot;;
+color: rgb(0, 0, 0);
 font: 24pt &quot;Mangal&quot;;
+font: 24pt &quot;Cooper Black&quot;;
 </string>
    </property>
    <property name="text">
@@ -95,8 +82,8 @@ font: 24pt &quot;Mangal&quot;;
   <widget class="QPushButton" name="Login">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>420</y>
+     <x>450</x>
+     <y>440</y>
      <width>131</width>
      <height>31</height>
     </rect>
