@@ -4,14 +4,18 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QDialog, QApplication, QWidget, QMessageBox
 from PyQt5.uic import loadUi
 from db_manager import DBMS
+from bg_img import Mywidget
 
 class Sign_Up(QDialog):
    
-    def __init__(self, db_manager):
+    def __init__(self, db_manager, bg_img):
         super(Sign_Up,self).__init__()
+        self.bg_img = bg_img
+        self.bg_img.setParent(self)
         loadUi('signup.ui', self)
         
         self.db_manager = db_manager
+        
         
         self.signupbutton.clicked.connect(self.signupstatus)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
@@ -19,7 +23,7 @@ class Sign_Up(QDialog):
         self.loginbutton.clicked.connect(self.gotologin)
     
     def gotologin(self):
-        login = Login()
+        login = Login(self.db_manager, self.bg_img)
         widget.addWidget(login)
         widget.setCurrentIndex(widget.currentIndex() + 1)  
         
@@ -43,7 +47,7 @@ class Sign_Up(QDialog):
         
         if success:
             QMessageBox.information(None, "Success", "Successfully Registered. \nPlease log in again.")
-            login = Login()
+            login = Login(self.db_manager, self.bg_img)
             widget.addWidget(login)
             widget.setCurrentIndex(widget.currentIndex() + 1) 
         else:
@@ -51,12 +55,15 @@ class Sign_Up(QDialog):
 
 
 class Login(QDialog):
-    def __init__(self):
+    def __init__(self, db_manager, bg_img):
         super(Login,self).__init__()
+        self.bg_img = bg_img
+        self.bg_img.setParent(self)
         loadUi('login.ui', self)
         self.Login.clicked.connect(self.Loggedinstatus)
         self.Loginpass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.db_manager = db_manager
+        
     def Loggedinstatus(self):
         Login.email = self.Loginemail.text()
         passwd = self.Loginpass.text()
@@ -65,17 +72,19 @@ class Login(QDialog):
             return
         if self.db_manager.fetch_user(Login.email, passwd):
             QMessageBox.information(None, "Success", "Logged in successfully.")
-            bankauth = Bankdetails(db_manager)
+            bankauth = Bankdetails(self.db_manager, self.bg_img)
             widget.addWidget(bankauth)
             widget.setCurrentIndex(widget.currentIndex() + 1)
         else:
             QMessageBox.warning(None, "Error", "Incorrect email or password.")
             return
         
-class Bankdetails(Login, QDialog):
-    def __init__(self, db_manager):
+class Bankdetails(QDialog):
+    def __init__(self, db_manager, bg_img):
         super(Bankdetails, self).__init__()
         self.email = Login.email
+        self.bg_img = bg_img
+        self.bg_img.setParent(self)
         loadUi('bankdetails.ui', self)
         self.db_manager = db_manager
         self.addbank.clicked.connect(self.bankauth)
@@ -100,8 +109,9 @@ class Bankdetails(Login, QDialog):
             QMessageBox.warning(None, "Error", "Something went wrong.")
     
 app = QApplication(sys.argv)
+bg_img = Mywidget()
 db_manager= DBMS()
-mainwindow = Sign_Up(db_manager)
+mainwindow = Sign_Up(db_manager, bg_img)
 widget = QtWidgets.QStackedWidget()
 widget.addWidget(mainwindow)
 widget.show()

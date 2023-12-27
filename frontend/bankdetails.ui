@@ -118,6 +118,32 @@ color: rgb(197, 197, 197);</string>
      <height>551</height>
     </rect>
    </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:‪C:/Users/NOVA BURST/Downloads/nftbgm.png);
+background-radius: 20px;
+background: transparent;</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>681</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="img" stdset="0">
+     <url>
+      <string>qrc:/new image/C:/Users/NOVA BURST/Downloads/nftbgm.png</string>
+     </url>
+    </property>
+   </widget>
   </widget>
   <zorder>widget</zorder>
   <zorder>creditcardno</zorder>
@@ -126,6 +152,8 @@ color: rgb(197, 197, 197);</string>
   <zorder>label_4</zorder>
   <zorder>cvv</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="LoginUi/res.qrc"/>
+ </resources>
  <connections/>
 </ui>
