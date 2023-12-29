@@ -52,3 +52,4 @@ INSERT INTO NFT_DETAILS VALUES(003, "CRYPTO PUNK", 85, "Cryptopunks is an NFT pr
           Each punk has certain attributes that are of a different level of rarity amongst the entire fleet");
 INSERT INTO NFT_DETAILS VALUES(004, "Net Artwork", 41, "It is a NFT made by Gen-z and you can get assets of the pure art of modern tech so what are you waiting for just go and grab a new and trendy art of modern world.");
 INSERT INTO NFT_DETAILS VALUES(005, "Annual FUNCTION token", 54, "It is a NFT that gives you assets of annual function tokens and fest so what are you waiting for grab your toke of enjoyment.");
+INsert into user_nft VALUES("sejan@mail.com", 01, 30);
