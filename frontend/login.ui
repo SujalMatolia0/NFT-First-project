@@ -18,6 +18,26 @@
 background-color: rgb(0, 0, 0);
 background: transparent;</string>
   </property>
+<<<<<<< HEAD:frontend/LGG In FORM.ui
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>150</y>
+     <width>231</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 30pt &quot;Comic Sans MS&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;NFT ADDA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+=======
+>>>>>>> bb6d7008b8bdfc56437f485b80d169580a887e16:frontend/login.ui
   <widget class="QLineEdit" name="Loginemail">
    <property name="geometry">
     <rect>
@@ -61,9 +81,15 @@ color: rgb(197, 197, 197);</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
+<<<<<<< HEAD:frontend/LGG In FORM.ui
+     <x>310</x>
+     <y>220</y>
+     <width>151</width>
+=======
      <x>460</x>
      <y>270</y>
      <width>131</width>
+>>>>>>> bb6d7008b8bdfc56437f485b80d169580a887e16:frontend/login.ui
      <height>51</height>
     </rect>
    </property>
