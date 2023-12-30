@@ -70,9 +70,15 @@ class Login(QDialog):
             return
         if self.db_manager.fetch_user(Login.email, passwd):
             QMessageBox.information(None, "Success", "Logged in successfully.")
-            bankauth = Bankdetails(self.db_manager, self.bg_img)
-            widget.addWidget(bankauth)
-            widget.setCurrentIndex(widget.currentIndex() + 1)
+            checkbac = self.db_manager.isbankthere(Login.email)
+            if checkbac:
+                mainmenu = Mainmenu(self.db_manager, self.bg_img)
+                widget.addWidget(mainmenu)
+                widget.setCurrentIndex(widget.currentIndex() + 1)
+            else:
+                bankauth = Bankdetails(self.db_manager, self.bg_img)
+                widget.addWidget(bankauth)
+                widget.setCurrentIndex(widget.currentIndex() + 1)
         else:
             QMessageBox.warning(None, "Error", "Incorrect email or password.")
             return

@@ -21,6 +21,16 @@ class DBMS:
         except sql.Error as e:
             print("The error is: ", e)
             return False
+    def isbankthere(self, email):
+        try: 
+            self.c1.execute("select email from user_details where credit_card is NOT NULL")
+            emails = [row[0] for row in self.c1.fetchall()]
+            if email in emails:
+                return True
+            else:
+                return False
+        except sql.Error as e:
+            print(f"The error is: {e}")
     def fetch_user(self, email, pswd):
         try:
             self.c1.execute(f"SELECT email,pass from user_details WHERE email = %s AND pass = %s", (email, pswd))
