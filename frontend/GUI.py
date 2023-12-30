@@ -96,6 +96,7 @@ class Bankdetails(QDialog):
     def bankauth(self):
         cardno = self.creditcardno.text()
         cvv = self.cvv.text()
+        wallet = int(self.wallet.text())
         if not(cardno and cvv):
             QMessageBox.warning(None,"Error", "Please fill the bank details properly.")
             return
@@ -105,7 +106,10 @@ class Bankdetails(QDialog):
         if (len(cvv) != 3):
             QMessageBox.warning(None,"Error", "Please enter correct cvv code.")
             return
-        success = self.db_manager.insert_bank(cardno, cvv, email = self.email)
+        if (wallet <= 0 or wallet >= 10000):
+            QMessageBox.warning(None,"Error", "Please enter the wallet amount between 1 and 9999.")
+            return
+        success = self.db_manager.insert_bank(cardno, cvv, wallet, email = self.email)
         if success:
             QMessageBox.information(None, "Success", "Bank account added successfully.")
             mainmenu = Mainmenu(self.db_manager, self.bg_img)
@@ -122,24 +126,24 @@ class Mainmenu(QDialog):
         loadUi('Main menu.ui', self)
         
         self.db_manager = db_manager
-        self.info.clicked.connect(self.infomenu)
-        self.buyorsell.clicked.connect(self.buyorsellmenu)
+        self.info.clicked.connect(self.buymenu)
+        self.buyorsell.clicked.connect(self.sellmenu)
         self.exit.clicked.connect(QApplication.quit)
-    def infomenu(self):
-        info_menu = infomenu(self.db_manager, self.bg_img)
-        widget.addWidget(info_menu)
+    def buymenu(self):
+        buymenu = buymenu(self.db_manager, self.bg_img)
+        widget.addWidget(buymenu)
         widget.setCurrentIndex(widget.currentIndex() + 1)
-    def buyorsellmenu(self):
-        buyorsellmenu = buyorsell(db_manager, bg_img)
-        widget.addWidget(buyorsellmenu)
+    def sellmenu(self):
+        sellmenu = Sellmenu(db_manager, bg_img)
+        widget.addWidget(sellmenu)
         widget.setCurrentIndex(widget.currentIndex() + 1) 
         
-class infomenu(QDialog):
+class buymenu(QDialog):
     def __init__(self, db_manager, bg_img):
-        super(infomenu , self).__init__()
+        super(buymenu , self).__init__()
         self.bg_img = bg_img
         self.bg_img.setParent(self)
-        loadUi('infomenu.ui', self)
+        loadUi('buymenu.ui', self)
         self.db_manager = db_manager
         nft_names = ""
         names = self.db_manager.nftnames_for_nftdetails(nft_names)
@@ -147,15 +151,15 @@ class infomenu(QDialog):
             self.nftname.addItem(name[0])
         self.nftname.currentIndexChanged[int].connect(self.show_nft_details)
         self.backbutton.clicked.connect(self.gotoMainmenu)
-        self.buybutton.clicked.connect(self.gotoBuymenu)
+        self.buybutton.clicked.connect(self.gotosellmenu)
             
     def gotoMainmenu(self):
         mainmenu = Mainmenu(db_manager, bg_img)
         widget.addWidget(mainmenu)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         
-    def gotoBuymenu(self):
-        mainmenu = buyorsell(db_manager, bg_img)
+    def gotosellmenu(self):
+        mainmenu = Sellmenu(db_manager, bg_img)
         widget.addWidget(mainmenu)
         widget.setCurrentIndex(widget.currentIndex() + 1)
     
@@ -168,36 +172,30 @@ class infomenu(QDialog):
         else:
             self.nftdetails.setText("No details available for this NFT")
             
-class buyorsell(QDialog):
+class Sellmenu(QDialog):
     def __init__(self, db_manager, bg_img):
-        super(buyorsell, self).__init__()
+        super(Sellmenu, self).__init__()
         self.bg_img = bg_img
         self.bg_img.setParent(self)
-        loadUi('buysell.ui', self)
+        loadUi('sellmenu.ui', self)
+        self.nftquant.setValue(1)
+        self.nftquant.valueChanged.connect(self.showresult)
         self.db_manager = db_manager
-        nft_names = ""
-        names = self.db_manager.nftnames_for_nftdetails(nft_names)
-        for name in names:
-            self.nftname.addItem(name[0])
+        self.value = 1
+        nftname = self.nftname.text()
+        nftprice = self.nftprice.text()
+        nftquant = self.value
+        print(nftname, nftprice, nftquant)
         self.backbutton.clicked.connect(self.gotoMainmenu)
-        self.quantity.valueChanged.connect(self.showresult)
-        self.buybutton.clicked.connect(self.gotoBuy)
-        self.sellbutton.clicked.connect(self.gotosell)
-            
+        self.sellnft.clicked.connect(self.gotosell)
+    def showresult(self):
+            self.value = self.nftquant.value()
     def gotoMainmenu(self):
         mainmenu = Mainmenu(db_manager, bg_img)
         widget.addWidget(mainmenu)
         widget.setCurrentIndex(widget.currentIndex() + 1)
-    def gotoBuy(self):
-        value = self.quantity.value()
-        if value == 0:
-            QMessageBox.warning(None, "Error", "The value of NFT should be greater than 0")
-        else:
-            reply = QMessageBox.question(self, 'Confirmation', f'Do you really want to buy {value} NFT?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
-            if reply == QMessageBox.Yes:
-                QMessageBox.information(None, "Success", "NFT bought successfully.")
     def gotosell(self):
-        value = self.quantity.value()
+        value = self.value
         if value == 0:
             QMessageBox.warning(None, "Error", "The value of NFT should be greater than 0")
         else:
@@ -206,11 +204,6 @@ class buyorsell(QDialog):
                 QMessageBox.information(None, "Success", "NFT sold successfully.")
             else: 
                     QMessageBox.warning(None, "Error", "Failed to sell NFT. Please try again.")
-
-
-    def showresult(self):
-        global value
-        value = self.quantity.value()
            
 app = QApplication(sys.argv)
 bg_img = Mywidget()

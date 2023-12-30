@@ -13,9 +13,9 @@ class DBMS:
         except sql.Error as e:
             print(f"Error: {e}")
             return False
-    def insert_bank(self, cardno, cvv, email):
+    def insert_bank(self, cardno, cvv, wallet, email):
         try:
-            self.c1.execute("Update user_details set credit_card = %s, cvv = %s where email = %s", (cardno, cvv, email))
+            self.c1.execute("Update user_details set credit_card = %s, cvv = %s, BALANCE = %s where email = %s", (cardno, cvv, wallet, email))
             self.con.commit()
             return True
         except sql.Error as e:
