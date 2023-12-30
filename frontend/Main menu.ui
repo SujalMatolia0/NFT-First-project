@@ -456,7 +456,7 @@ QPushButton:hover { background-color: #5588CC; }</string>
        <set>Qt::ImhNone</set>
       </property>
       <property name="text">
-       <string>Information about NFTs</string>
+       <string>Exhibition</string>
       </property>
      </widget>
     </item>
@@ -660,7 +660,7 @@ QPushButton:hover { background-color: #5588CC; }</string>
        <set>Qt::ImhNone</set>
       </property>
       <property name="text">
-       <string>Buy or Sell the NFT</string>
+       <string>Showcase your NFT</string>
       </property>
      </widget>
     </item>
@@ -671,7 +671,7 @@ QPushButton:hover { background-color: #5588CC; }</string>
   <zorder>label</zorder>
  </widget>
  <resources>
-  <include location="../frontend/hi.qrc"/>
+  <include location="hi.qrc"/>
  </resources>
  <connections/>
 </ui>
