@@ -14,6 +14,8 @@ def main():
     window = Sign_Up(db_manager, bg_img)
     
     window.setFixedSize(800, 600)
+    window.setWindowFlag(Qt.WindowMaximizeButtonHint, False)
+    window.setWindowFlag(Qt.WindowMinimizeButtonHint, False)
     
     sys.exit(app.exec_())
 

@@ -7,7 +7,6 @@ from db_manager import DBMS
 from bg_img import Mywidget
 
 
-
 class Sign_Up(QDialog):
    
     def __init__(self, db_manager, bg_img):
@@ -21,7 +20,6 @@ class Sign_Up(QDialog):
         self.conpass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.loginbutton.clicked.connect(self.gotologin)
         self.setFixedSize(800, 600)
-        self.resize(0,0)
     
     
     def gotologin(self):
