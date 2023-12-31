@@ -45,7 +45,7 @@ background: transparent;</string>
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>440</y>
+      <y>430</y>
       <width>281</width>
       <height>42</height>
      </rect>
@@ -282,7 +282,7 @@ font: 24pt &quot;Cooper Black&quot;;
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-color: rgb(197, 197, 197);</string>
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
      <string/>
@@ -295,14 +295,15 @@ color: rgb(197, 197, 197);</string>
     <property name="geometry">
      <rect>
       <x>409</x>
-      <y>257</y>
+      <y>250</y>
       <width>281</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-color: rgb(197, 197, 197);</string>
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
      <string/>
@@ -315,14 +316,17 @@ color: rgb(197, 197, 197);</string>
     <property name="geometry">
      <rect>
       <x>409</x>
-      <y>297</y>
+      <y>290</y>
       <width>281</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-color: rgb(197, 197, 197);</string>
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhEmailCharactersOnly</set>
     </property>
     <property name="text">
      <string/>
@@ -335,14 +339,17 @@ color: rgb(197, 197, 197);</string>
     <property name="geometry">
      <rect>
       <x>409</x>
-      <y>337</y>
+      <y>330</y>
       <width>281</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-color: rgb(197, 197, 197);</string>
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhSensitiveData</set>
     </property>
     <property name="text">
      <string/>
@@ -355,14 +362,17 @@ color: rgb(197, 197, 197);</string>
     <property name="geometry">
      <rect>
       <x>409</x>
-      <y>377</y>
+      <y>370</y>
       <width>281</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-color: rgb(197, 197, 197);</string>
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhSensitiveData</set>
     </property>
     <property name="text">
      <string/>

@@ -248,7 +248,7 @@ QPushButton:hover { background-color: #5588CC; }</string>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>500</x>
       <y>150</y>
       <width>391</width>
       <height>51</height>
@@ -276,7 +276,10 @@ font: 24pt &quot;Cooper Black&quot;;
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-color: rgb(197, 197, 197);</string>
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhEmailCharactersOnly</set>
     </property>
     <property name="text">
      <string/>
@@ -296,7 +299,10 @@ color: rgb(197, 197, 197);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-color: rgb(197, 197, 197);</string>
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhSensitiveData</set>
     </property>
     <property name="text">
      <string/>

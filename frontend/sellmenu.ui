@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="sellnft">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>270</x>
      <y>520</y>
      <width>389</width>
      <height>42</height>
@@ -242,7 +242,7 @@ QPushButton:hover { background-color: #5588CC; }</string>
   <widget class="QLineEdit" name="balance">
    <property name="geometry">
     <rect>
-     <x>670</x>
+     <x>630</x>
      <y>200</y>
      <width>191</width>
      <height>23</height>
@@ -384,8 +384,8 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>330</y>
+     <x>150</x>
+     <y>320</y>
      <width>205</width>
      <height>21</height>
     </rect>
@@ -403,8 +403,8 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>370</y>
+     <x>150</x>
+     <y>360</y>
      <width>205</width>
      <height>21</height>
     </rect>
@@ -422,10 +422,10 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLineEdit" name="nftdescription">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>400</y>
-     <width>571</width>
-     <height>111</height>
+     <x>150</x>
+     <y>380</y>
+     <width>581</width>
+     <height>131</height>
     </rect>
    </property>
    <property name="font">

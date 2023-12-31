@@ -11,12 +11,7 @@ def main():
     app = QApplication(sys.argv)
     db_manager = DBMS()
     bg_img = Mywidget()
-    window = Sign_Up(db_manager, bg_img)
-    
-    window.setFixedSize(800, 600)
-    window.setWindowFlag(Qt.WindowMaximizeButtonHint, False)
-    window.setWindowFlag(Qt.WindowMinimizeButtonHint, False)
-    
+    window = Sign_Up(db_manager, bg_img)    
     sys.exit(app.exec_())
 
 if __name__ == '__main__':

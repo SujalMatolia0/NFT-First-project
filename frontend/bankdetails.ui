@@ -46,7 +46,10 @@ background: transparent;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-color: rgb(197, 197, 197);</string>
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferNumbers</set>
     </property>
     <property name="text">
      <string/>
@@ -66,7 +69,10 @@ color: rgb(197, 197, 197);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-color: rgb(197, 197, 197);</string>
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferNumbers</set>
     </property>
     <property name="text">
      <string/>
@@ -296,7 +302,10 @@ QPushButton:hover { background-color: #5588CC; }</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-color: rgb(197, 197, 197);</string>
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhPreferNumbers</set>
     </property>
     <property name="text">
      <string/>
@@ -308,7 +317,7 @@ color: rgb(197, 197, 197);</string>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>370</x>
       <y>270</y>
       <width>491</width>
       <height>51</height>

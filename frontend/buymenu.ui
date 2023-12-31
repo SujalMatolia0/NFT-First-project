@@ -226,8 +226,8 @@ QPushButton:hover { background-color: #5588CC; }</string>
   <widget class="QCommandLinkButton" name="backbutton">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>270</y>
+     <x>120</x>
+     <y>250</y>
      <width>181</width>
      <height>41</height>
     </rect>
@@ -304,10 +304,10 @@ QComBox:hover { background-color: #5588CC; }</string>
   <widget class="QLineEdit" name="balance">
    <property name="geometry">
     <rect>
-     <x>730</x>
+     <x>670</x>
      <y>270</y>
      <width>191</width>
-     <height>23</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -330,10 +330,10 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>470</x>
      <y>270</y>
      <width>251</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -356,10 +356,10 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>250</y>
+     <x>470</x>
+     <y>240</y>
      <width>205</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -372,10 +372,10 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLineEdit" name="sellername">
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>250</y>
+     <x>610</x>
+     <y>240</y>
      <width>191</width>
-     <height>23</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -398,7 +398,7 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>360</x>
      <y>180</y>
      <width>271</width>
      <height>51</height>
