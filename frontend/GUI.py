@@ -20,6 +20,9 @@ class Sign_Up(QDialog):
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.conpass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.loginbutton.clicked.connect(self.gotologin)
+        self.setFixedSize(800, 600)
+        self.resize(0,0)
+    
     
     def gotologin(self):
         login = Login(self.db_manager, self.bg_img)

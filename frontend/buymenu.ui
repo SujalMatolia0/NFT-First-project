@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>946</width>
-    <height>727</height>
+    <width>976</width>
+    <height>740</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="buybutton">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>650</y>
+     <x>270</x>
+     <y>540</y>
      <width>389</width>
      <height>42</height>
     </rect>
@@ -226,8 +226,8 @@ QPushButton:hover { background-color: #5588CC; }</string>
   <widget class="QCommandLinkButton" name="backbutton">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>300</y>
+     <x>160</x>
+     <y>270</y>
      <width>181</width>
      <height>41</height>
     </rect>
@@ -242,10 +242,10 @@ QPushButton:hover { background-color: #5588CC; }</string>
   <widget class="QLabel" name="nftdetails">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>410</y>
+     <x>120</x>
+     <y>360</y>
      <width>671</width>
-     <height>221</height>
+     <height>171</height>
     </rect>
    </property>
    <property name="font">
@@ -287,8 +287,8 @@ background: Transparent;</string>
   <widget class="QComboBox" name="nftname">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>360</y>
+     <x>300</x>
+     <y>310</y>
      <width>421</width>
      <height>41</height>
     </rect>
@@ -304,8 +304,8 @@ QComBox:hover { background-color: #5588CC; }</string>
   <widget class="QLineEdit" name="balance">
    <property name="geometry">
     <rect>
-     <x>780</x>
-     <y>330</y>
+     <x>730</x>
+     <y>270</y>
      <width>191</width>
      <height>23</height>
     </rect>
@@ -330,9 +330,9 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>330</y>
-     <width>205</width>
+     <x>480</x>
+     <y>270</y>
+     <width>251</width>
      <height>21</height>
     </rect>
    </property>
@@ -346,8 +346,8 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QSpinBox" name="buyquant">
    <property name="geometry">
     <rect>
-     <x>780</x>
-     <y>360</y>
+     <x>740</x>
+     <y>310</y>
      <width>51</width>
      <height>41</height>
     </rect>
@@ -356,8 +356,8 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>310</y>
+     <x>540</x>
+     <y>250</y>
      <width>205</width>
      <height>21</height>
     </rect>
@@ -372,8 +372,8 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLineEdit" name="sellername">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>310</y>
+     <x>700</x>
+     <y>250</y>
      <width>191</width>
      <height>23</height>
     </rect>
@@ -398,10 +398,10 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>270</y>
-     <width>211</width>
-     <height>31</height>
+     <x>330</x>
+     <y>180</y>
+     <width>271</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">

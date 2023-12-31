@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="sellnft">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>650</y>
+     <x>280</x>
+     <y>520</y>
      <width>389</width>
      <height>42</height>
     </rect>
@@ -226,8 +226,8 @@ QPushButton:hover { background-color: #5588CC; }</string>
   <widget class="QCommandLinkButton" name="backbutton">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>260</y>
+     <x>130</x>
+     <y>180</y>
      <width>181</width>
      <height>41</height>
     </rect>
@@ -242,8 +242,8 @@ QPushButton:hover { background-color: #5588CC; }</string>
   <widget class="QLineEdit" name="balance">
    <property name="geometry">
     <rect>
-     <x>750</x>
-     <y>270</y>
+     <x>670</x>
+     <y>200</y>
      <width>191</width>
      <height>23</height>
     </rect>
@@ -268,9 +268,9 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>539</x>
-     <y>271</y>
-     <width>205</width>
+     <x>420</x>
+     <y>200</y>
+     <width>251</width>
      <height>21</height>
     </rect>
    </property>
@@ -284,8 +284,8 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QSpinBox" name="nftquant">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>400</y>
+     <x>340</x>
+     <y>310</y>
      <width>51</width>
      <height>41</height>
     </rect>
@@ -294,8 +294,8 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>330</y>
+     <x>150</x>
+     <y>240</y>
      <width>205</width>
      <height>21</height>
     </rect>
@@ -313,8 +313,8 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLineEdit" name="nftname">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>330</y>
+     <x>290</x>
+     <y>240</y>
      <width>221</width>
      <height>23</height>
     </rect>
@@ -339,8 +339,8 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>370</y>
+     <x>150</x>
+     <y>280</y>
      <width>205</width>
      <height>21</height>
     </rect>
@@ -358,8 +358,8 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLineEdit" name="nftprice">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>370</y>
+     <x>290</x>
+     <y>280</y>
      <width>221</width>
      <height>23</height>
     </rect>
@@ -384,8 +384,8 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>410</y>
+     <x>140</x>
+     <y>330</y>
      <width>205</width>
      <height>21</height>
     </rect>
@@ -403,8 +403,8 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>450</y>
+     <x>140</x>
+     <y>370</y>
      <width>205</width>
      <height>21</height>
     </rect>
@@ -422,10 +422,10 @@ font: 14pt &quot;Cooper Black&quot;;</string>
   <widget class="QLineEdit" name="nftdescription">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>480</y>
-     <width>611</width>
-     <height>151</height>
+     <x>160</x>
+     <y>400</y>
+     <width>571</width>
+     <height>111</height>
     </rect>
    </property>
    <property name="font">
