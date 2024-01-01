@@ -1,5 +1,5 @@
 
-# NFT Selling App with Tkinter and MySQL
+# NFT Selling App with PyQT5 and MySQL
 
 This Python application is a platform for buying and selling Non-Fungible Tokens (NFTs). It features user authentication (login and signup), displays available NFTs, and allows users to buy or sell NFTs while providing detailed information about each NFT.
 
@@ -14,7 +14,7 @@ This Python application is a platform for buying and selling Non-Fungible Tokens
 
 ## Introduction
 
-This application is built using Python with the Tkinter library for the graphical user interface and MySQL for the database. It enables users to perform the following actions:
+This application is built using Python with the PyQT5 library for the graphical user interface and MySQL for the database. It enables users to perform the following actions:
 - **Authentication:** Users can log in or sign up.
 - **NFT Display:** Display available NFTs with detailed information.
 - **Buying and Selling:** Users can buy or sell NFTs through the application.
@@ -36,7 +36,7 @@ To run the application locally, follow these steps:
 
 2. Install required dependencies:
     ```bash
-    pip install tkinter mysql-connector-python
+    pip install pyqt5 mysql-connector-python
     ```
 
 ## Usage
@@ -62,6 +62,6 @@ We welcome contributions! If you'd like to contribute to this project, feel free
 
 ## Credits
 
-- Author: [Sujal Sharma](https://github.com/SujalMatolia0), [Sejan Bhagani](https://github.com/Sejanbagani1402)
-- Libraries/Frameworks used: Tkinter, MySQL Connector/Python
+- Author: [Sujal Sharma](https://github.com/SujalMatolia0), [Sejan Bagani](https://github.com/Sejanbagani1402)
+- Libraries/Frameworks used: PyQT5, MySQL Connector/Python
 
