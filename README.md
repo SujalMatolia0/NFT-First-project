@@ -52,7 +52,7 @@ Follow the on-screen instructions for logging in or signing up. Once logged in, 
 
 ## Database Setup
 
-The application uses MySQL for storing user information and NFT details. Make sure you have MySQL installed and create the necessary tables. You can find the SQL schema in the `db.sql` file included in the repository.
+The application uses MySQL for storing user information and NFT details. You can find the SQL schema in the `db.sql` file included in the repository.
 
 There is no need to setup anything, we already setup every command to just to connect to sql-connecter. 
 
