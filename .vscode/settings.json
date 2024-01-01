@@ -12,6 +12,7 @@
             "name": "localhost",
             "database": "pass",
             "username": "root"
+            
         }
     ]
 }
