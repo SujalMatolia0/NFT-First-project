@@ -62,6 +62,6 @@ We welcome contributions! If you'd like to contribute to this project, feel free
 
 ## Credits
 
-- Author: [Sujal Sharma](https://github.com/SujalMatolia0),[Sejan Bhagani](https://github.com/Sejanbagani1402)
+- Author: [Sujal Sharma](https://github.com/SujalMatolia0), [Sejan Bhagani](https://github.com/Sejanbagani1402)
 - Libraries/Frameworks used: Tkinter, MySQL Connector/Python
 
