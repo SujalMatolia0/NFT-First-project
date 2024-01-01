@@ -1,5 +1,6 @@
 import mysql.connector as sql
 
+
 class DBMS:
     def __init__(self):
         self.con = sql.connect(host = "localhost",user = 'root',passwd = 'pass',database = 'nft_project')
